@@ -1,0 +1,38 @@
+.profile_pic{
+	margin-top:150px;
+	margin-left:100px;
+	width: 200px;
+	border-radius: 50%;
+}
+.file{
+	display:none;
+}
+.profile_data{
+	margin-left:-100px
+}
+.stu_profile{
+	margin-top:150px;
+}
+.stu_id{
+	 padding-top:1px;
+	 color: #0f0f0f;
+     font-family: "Segoe UI";
+     font-size: 16px;
+     font-weight: 700;
+}
+.flex{
+	display:block;
+}
+@media only screen and(max-width: 1044px){
+.profile_data{
+	margin-left:0px
+}
+}
+@media only screen and(max-width: 767px){
+.profile_data{
+	margin-left:100px;
+}
+.stu_profile{
+	margin-top:0px;
+  }
+}

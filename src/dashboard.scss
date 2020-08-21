@@ -1,0 +1,114 @@
+.navs-bg{
+	background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  z-index:11111111111111111111111111111111;
+}
+.logout{
+  position:fixed;
+  right:10px;
+}
+._profile_image{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  margin-top:5px;
+  background-color:white;
+}
+.logout_{
+  text-decoration:none;
+  color:white;
+  margin-right:10px;
+  &:hover{
+    color:#A29898;
+    cursor:pointer;
+  }
+}
+.overflow{
+	overflow:hidden;
+}
+.bg-dashboard{
+	background-color:#D3D3D3;
+    position:fixed;
+    top:65px;
+    height:100vh;
+    width:280px;
+    animation-name:dashboard;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+    & li{
+      padding-top:10px;
+      color:#003CE8;
+      cursor:pointer;
+      & a{
+        text-decoration:none;	 
+        color:#003CE8;
+      	 &:hover{
+      	 	color:#003CE8;
+        	border-bottom:1px solid #F33737;
+        }
+      }
+    }
+}
+.dashboard-active{
+	 color:#003CE8;
+   border-bottom:1px solid #F33737;
+   font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 700;
+}
+@keyframes dashboard{
+  from{margin-left:-400px;}
+  to{margin-left:0;}
+}
+.dashboard-hamburger{
+  display:none;
+  position:fixed;
+  color:white;
+  top:30px;
+  left:10px
+}
+.bg-content{
+   margin-top: 10px;
+  
+}
+.navs+.bg-dashboard{
+	padding:0.1px;
+
+}
+.dashboard-header{
+	margin-top:50px;
+	list-style: none;
+}
+
+@media only screen and (max-width: 844px){
+  .logout{
+    position:absolute;
+    top:0;
+  }
+}
+@media only screen and (max-width: 767px){
+
+ 
+  .navs-bg{
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6));
+   }
+  .bg-dashboard{
+     left:-500px;
+     margin:0;
+     padding:0;
+     z-index:1111111111111111111111111111111;
+  }
+  .bg-dashboard-show{
+     position:fixed;
+     margin:0;
+     padding:0;
+     left:0;
+  }
+  .dashboard-hamburger{
+    display:inline;
+    cursor:pointer;
+    left:40px;
+  }
+  .logout_{
+    display:none;
+  }
+}

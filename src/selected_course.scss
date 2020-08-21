@@ -1,0 +1,22 @@
+.cours{
+	padding-top:150px;
+}
+
+.description{
+	margin-left:40px;	 
+}
+.submit{
+
+   cursor:pointer;
+   margin-left:50px;
+   border-radius:10px;
+   width:70px;
+   padding:10px; 
+   background-color:#DC4B4B;
+   text-decoration:none;
+   color:white;
+	&:hover{
+		color:white;
+		background:#F33737;
+	}
+}
