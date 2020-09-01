@@ -7,10 +7,13 @@
 
 }
 .z-index{
-	z-index:111111111111111111111111111111111111111111111111111111111;
+	z-index:111111111111111111111111111111111111;
 }
 .home{
 	overflow:auto;
+}
+.selected__{
+	padding-top:100px;
 }
 .navs{
 	position:fixed;
@@ -202,6 +205,12 @@
 	padding:10px;
 }
 @media only screen and (max-width: 848px){
+
+.login_image_{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
  .title{
  	display:flex;
  	justify-content:center;
@@ -231,7 +240,7 @@
  	display:block;
  	padding-bottom:10px;
  	height:50px;
- 	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+ 	background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5));
  }
  .nav-auto{
  	height:auto;
@@ -272,4 +281,15 @@
 
  }
 
+}
+
+.login_image_{
+	z-index:111111111111111111111111111;
+	position:absolute;
+	right:40px;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	cursor:pointer;
+	background:gray;
 }

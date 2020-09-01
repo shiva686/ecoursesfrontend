@@ -1,10 +1,12 @@
-import React ,{useState}from 'react';
+import React ,{useState,useEffect}from 'react';
 import profile_pic from './Photos/profile_pic.png'
 import './profile.scss'
+import Cookies from 'universal-cookie';
 export const Profile = ()=>{
   
    const [pic , change_pic]=useState(profile_pic)
    const [input_value , change_input_value]=useState(false)
+   const [profile, changeprofile]=useState({stu_id:"1234",name:"name",email:"email"})
    const profile_click = ()=>{
    const file = document.getElementsByClassName('file');
    file[0].click();
@@ -17,6 +19,29 @@ export const Profile = ()=>{
       })
    });
   }
+  const cookies = new Cookies();
+   let value = cookies.get('token')
+     let data = {
+      'token':value
+    }
+  useEffect(()=>{
+    fetch('http://localhost:8000/api/profile',
+    {
+      method:'POST',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(data)
+    }).then(res=>{
+         if(res.ok){
+           return res.json()
+         }else{
+           alert('something went wrong')
+         }
+    }).then(res=>{
+         changeprofile(res)
+    })
+  },[])
 	return(
 		<>
 		<div className ="row profile_">
@@ -27,15 +52,15 @@ export const Profile = ()=>{
 		  <div className = "col-md-6 profile_data">
 		  <div className = "stu_profile">
            <p className = "stu_id">Student Id :</p>
-           <p className = "id">123456789</p>
+           <p className = "id">{profile.stu_id}</p>
           </div> 
           <div className = "flex">
            <p className = "stu_id">Name:</p>
-           <p className = "name">Shiva</p>
+           <p className = "name">{profile.name}</p>
           </div>
            <div className = "flex">
            <p className = "stu_id">Email:</p>
-           <p className = "email">smartwebtechno898@gmail.com</p>
+           <p className = "email">{profile.email}</p>
           </div>
 		  </div>
 		</div>

@@ -16,4 +16,6 @@ import {createStore } from 'redux';
 let Store = createStore(reducer);
 
 export default Store;
-export const Dispatch = (payload)=>(Store.dispatch({type:"Update",payload}));
+export const Dispatch = (payload)=>{
+(Store.dispatch({type:"Update",payload}))
+}

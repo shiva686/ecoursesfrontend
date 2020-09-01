@@ -23,12 +23,19 @@
 .flex{
 	display:block;
 }
+
+@media only screen and(max-width: 1125px){
+.profile_data{
+	margin-left:0px
+}
+}
+
 @media only screen and(max-width: 1044px){
 .profile_data{
 	margin-left:0px
 }
 }
-@media only screen and(max-width: 767px){
+@media only screen and(max-width: 910px){
 .profile_data{
 	margin-left:100px;
 }
